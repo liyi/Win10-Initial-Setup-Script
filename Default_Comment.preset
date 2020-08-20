@@ -1,0 +1,260 @@
+##########
+# Win 10 / Server 2016 / Server 2019 Initial Setup Script - Default preset
+# Author: Disassembler <disassembler@dasm.cz>
+# Version: v3.10, 2020-07-15
+# Source: https://github.com/Disassembler0/Win10-Initial-Setup-Script
+##########
+
+### Require administrator privileges ###
+RequireAdmin
+
+### Privacy Tweaks ###
+DisableTelemetry                # EnableTelemetry                # 遥测技术
+DisableCortana                  # EnableCortana                  # 小娜
+DisableWiFiSense                # EnableWiFiSense                # 共享Wifi密码
+# DisableSmartScreen            # EnableSmartScreen              # IE恶意代码拦截功能
+# DisableWebSearch              # EnableWebSearch                # 开始菜单的必应搜索
+DisableAppSuggestions           # EnableAppSuggestions           # App建议和自动安装
+DisableActivityHistory          # EnableActivityHistory          # 任务视图内的活动记录
+# DisableSensors                # EnableSensors                  # 传感器
+DisableLocation                 # EnableLocation                 # 定位
+DisableMapUpdates               # EnableMapUpdates               # 地图更新
+DisableFeedback                 # EnableFeedback                 # 反馈功能
+DisableTailoredExperiences      # EnableTailoredExperiences      # 定制体验
+DisableAdvertisingID            # EnableAdvertisingID            # 广告ID
+DisableWebLangList              # EnableWebLangList              # 让网站访问语言列表
+# DisableBiometrics             # EnableBiometrics               # 生物特征功能，如指纹
+# DisableCamera                 # EnableCamera                   # 摄像头
+# DisableMicrophone             # EnableMicrophone               # 麦克风
+DisableErrorReporting           # EnableErrorReporting           # 错误报告
+# SetP2PUpdateLocal             # SetP2PUpdateInternet           # SetP2PUpdateDisable # Windows Update P2P传输加速
+DisableDiagTrack                # EnableDiagTrack                # 诊断与跟踪
+DisableWAPPush                  # EnableWAPPush                  # 基于云的计算机管理服务
+# EnableClearRecentFiles        # DisableClearRecentFiles        # 登出时清理最近打开文件
+# DisableRecentFiles            # EnableRecentFiles              # 记录最近打开文件
+
+### UWP Privacy Tweaks ###
+DisableUWPBackgroundApps        # EnableUWPBackgroundApps        # 后台应用下载数据或更新
+# DisableUWPVoiceActivation     # EnableUWPVoiceActivation       # 通过语音激活应用
+# DisableUWPNotifications       # EnableUWPNotifications         # 应用通知
+# DisableUWPAccountInfo         # EnableUWPAccountInfo           # 应用访问账户信息
+# DisableUWPContacts            # EnableUWPContacts              # 应用访问联系人
+# DisableUWPCalendar            # EnableUWPCalendar              # 应用访问日历
+# DisableUWPPhoneCalls          # EnableUWPPhoneCalls            # 应用拨打电话
+# DisableUWPCallHistory         # EnableUWPCallHistory           # 应用访问通话记录
+# DisableUWPEmail               # EnableUWPEmail                 # 应用访问邮件
+# DisableUWPTasks               # EnableUWPTasks                 # 应用访问任务
+# DisableUWPMessaging           # EnableUWPMessaging             # 应用访问短信
+# DisableUWPRadios              # EnableUWPRadios                # 应用访问收音机
+# DisableUWPOtherDevices        # EnableUWPOtherDevices          # 应用访问其它设备
+# DisableUWPDiagInfo            # EnableUWPDiagInfo              # 应用访问诊断信息
+# DisableUWPFileSystem          # EnableUWPFileSystem            # 应用访问库和文件系统
+# DisableUWPSwapFile            # EnableUWPSwapFile              # 应用创建和使用内存交换文件
+
+### Security Tweaks ###
+# SetUACLow                     # SetUACHigh                     # UAC级别
+# EnableSharingMappedDrives     # DisableSharingMappedDrives     # 共享映射驱动器
+DisableAdminShares              # EnableAdminShares              # 默认共享
+# DisableFirewall               # EnableFirewall                 # 防火墙
+# HideDefenderTrayIcon          # ShowDefenderTrayIcon           # Defender系统托盘图标
+# DisableDefender               # EnableDefender                 # Defender功能
+# DisableDefenderCloud          # EnableDefenderCloud            # Defender云保护
+# EnableCtrldFolderAccess       # DisableCtrldFolderAccess       # WDEG受控文件夹访问
+# EnableCIMemoryIntegrity       # DisableCIMemoryIntegrity       # 内存隔离完整性
+# EnableDefenderAppGuard        # DisableDefenderAppGuard        # 应用程序防护（沙盒）server不适用
+HideAccountProtectionWarn       # ShowAccountProtectionWarn      # Defender中未登录微软账户警告
+# DisableDownloadBlocking       # EnableDownloadBlocking         # 下载文件安全锁定属性
+DisableScriptHost               # EnableScriptHost               # vbs脚本运行
+EnableDotNetStrongCrypto        # DisableDotNetStrongCrypto      # .Net强加密
+# EnableMeltdownCompatFlag      # DisableMeltdownCompatFlag
+EnableF8BootMenu                # DisableF8BootMenu              # 开机时F8启动菜单
+# DisableBootRecovery           # EnableBootRecovery             # 启动错误时自动还原
+# DisableRecoveryAndReset       # EnableRecoveryAndReset         # 禁用还原和重置
+SetDEPOptOut                    # SetDEPOptIn                    # 数据执行保护（Out为所有）
+
+### Network Tweaks ###
+SetCurrentNetworkPrivate        # SetCurrentNetworkPublic        # 设置当前网络为专用网络（能共享）
+# SetUnknownNetworksPrivate     # SetUnknownNetworksPublic       # 设置未知网络为专用或公用
+# DisableNetDevicesAutoInst     # EnableNetDevicesAutoInst       # 自动安装网络设备
+# DisableHomeGroups             # EnableHomeGroups               # 家庭组，server不适用
+# DisableSMB1                   # EnableSMB1                     # SMB1.0，存在安全漏洞
+# DisableSMBServer              # EnableSMBServer                # SMB服务器功能
+# DisableNetBIOS                # EnableNetBIOS                  # NetBIOS
+# DisableLLMNR                  # EnableLLMNR
+# DisableLLDP                   # EnableLLDP                     # LLDP协议驱动（当前所有网卡）
+# DisableLLTD                   # EnableLLTD                     # LLTD链接层拓扑发现（当前所有网卡）
+# DisableMSNetClient            # EnableMSNetClient              # 设置微软网络客户端（当前所有网卡）
+# DisableQoS                    # EnableQoS                      # 设置QoS数据包计划程序（当前所有网卡）
+# DisableIPv4                   # EnableIPv4                     # 设置IPv4支持（当前所有网卡）
+# DisableIPv6                   # EnableIPv6                     # 设置IPv6支持（当前所有网卡）
+# DisableNCSIProbe              # EnableNCSIProbe                # 网络连接状态指示器（判断是否连接到互联网）
+# DisableConnectionSharing      # EnableConnectionSharing        # 网络连接共享（比如热点）
+DisableRemoteAssistance         # EnableRemoteAssistance         # 远程协助，server默认不适用，除非已安装该功能
+# EnableRemoteDesktop           # DisableRemoteDesktop           # 远程桌面
+
+### Service Tweaks ###
+# DisableUpdateMSRT             # EnableUpdateMSRT               # 禁止提供恶意软件删除工具
+# DisableUpdateDriver           # EnableUpdateDriver             # 驱动通过Update更新
+EnableUpdateMSProducts          # DisableUpdateMSProducts        # 在Update中接收其他微软产品更新
+# DisableUpdateAutoDownload     # EnableUpdateAutoDownload       # 自动下载更新
+DisableUpdateRestart            # EnableUpdateRestart            # 安装更新后自动重启
+DisableMaintenanceWakeUp        # EnableMaintenanceWakeUp        # 每夜维护唤醒
+# DisableAutoRestartSignOn      # EnableAutoRestartSignOn        # Update自动重新登录
+DisableSharedExperiences        # EnableSharedExperiences        # 体验共享功能，server不适用
+# EnableClipboardHistory        # DisableClipboardHistory        # 剪切板历史记录，server不适用
+DisableAutoplay                 # EnableAutoplay                 # 自动播放
+DisableAutorun                  # EnableAutorun                  # 自动运行
+# DisableRestorePoints          # EnableRestorePoints            # 禁用系统盘的系统还原，不会删除已存在的还原点，server不适用
+# EnableStorageSense            # DisableStorageSense            # 存储感知（自动清理文件）
+# DisableDefragmentation        # EnableDefragmentation          # 磁盘优化计划
+# DisableSuperfetch             # EnableSuperfetch               # 预读取
+# DisableIndexing               # EnableIndexing                 # 索引（搜索加速）
+# DisableRecycleBin             # EnableRecycleBin               # 禁用回收站（直接删除）
+EnableNTFSLongPaths             # DisableNTFSLongPaths           # NTFS大于260个字符的长路径支持
+# DisableNTFSLastAccess         # EnableNTFSLastAccess           # 最后访问时间戳
+# SetBIOSTimeUTC                # SetBIOSTimeLocal               # 设置BIOS时间为UTC或本地
+# EnableHibernation             # DisableHibernation             # 休眠，有自启动Hyper-V的server不适用
+# DisableSleepButton            # EnableSleepButton              # 睡眠按钮
+# DisableSleepTimeout           # EnableSleepTimeout             # 熄屏和睡眠时间
+# DisableFastStartup            # EnableFastStartup              # 快速启动
+# DisableAutoRebootOnCrash      # EnableAutoRebootOnCrash        # 崩溃自动重启电脑
+
+### UI Tweaks ###
+DisableActionCenter             # EnableActionCenter             # 操作中心（通知中心）
+DisableLockScreen               # EnableLockScreen               # 禁用或启用锁屏
+# DisableLockScreenRS1          # EnableLockScreenRS1
+HideNetworkFromLockScreen       # ShowNetworkOnLockScreen        # 锁屏界面显示网络连接
+HideShutdownFromLockScreen      # ShowShutdownOnLockScreen       # 锁屏界面显示关机按钮
+DisableLockScreenBlur           # EnableLockScreenBlur           # 锁屏背景模糊
+# DisableAeroShake              # EnableAeroShake                # 拖动并摇摆窗口时最小化其它窗口
+DisableAccessibilityKeys        # EnableAccessibilityKeys        # 粘滞键、切换键、筛选键
+ShowTaskManagerDetails          # HideTaskManagerDetails         # 任务管理器显示详细信息
+ShowFileOperationsDetails       # HideFileOperationsDetails      # 复制、移动文件时显示详细信息
+# EnableFileDeleteConfirm       # DisableFileDeleteConfirm       # 文件删除到回收站提示确认
+HideTaskbarSearch               # ShowTaskbarSearchIcon          # ShowTaskbarSearchBox  # 任务栏搜索图标
+HideTaskView                    # ShowTaskView                   # 任务视图图标
+ShowSmallTaskbarIcons           # ShowLargeTaskbarIcons          # 任务栏小图标/大图标
+SetTaskbarCombineWhenFull       # SetTaskbarCombineNever         # SetTaskbarCombineAlways  # 任务栏图标合并
+HideTaskbarPeopleIcon           # ShowTaskbarPeopleIcon          # 任务栏联系人图标
+ShowTrayIcons                   # HideTrayIcons                  # 显示隐藏所有托盘图标
+# ShowSecondsInTaskbar          # HideSecondsFromTaskbar         # 任务栏时间显示秒数
+DisableSearchAppInStore         # EnableSearchAppInStore         # 禁止在商店中搜索打开未知扩展名文件的APP
+DisableNewAppPrompt             # EnableNewAppPrompt             # 禁止新应用匹配文件格式提醒
+# HideRecentlyAddedApps         # ShowRecentlyAddedApps          # 开始菜单最近添加的程序
+# HideMostUsedApps              # ShowMostUsedApps               # 开始菜单使用最多的程序
+# SetWinXMenuPowerShell         # SetWinXMenuCmd                 # 开始按钮右键中切换PowerShell和CMD
+# SetControlPanelSmallIcons     # SetControlPanelLargeIcons      # SetControlPanelCategories  # 控制面板图标大小分类
+DisableShortcutInName           # EnableShortcutInName           # “- 快捷方式”字样
+# HideShortcutArrow             # ShowShortcutArrow              # 快捷方式箭头
+SetVisualFXPerformance          # SetVisualFXAppearance          # 设置视觉效果为高性能或外观
+# EnableTitleBarColor           # DisableTitleBarColor           # 彩色标题栏
+# SetAppsDarkMode               # SetAppsLightMode               # 为APP设置深色模式
+# SetSystemLightMode            # SetSystemDarkMode              # 为系统设置深色模式
+# AddENKeyboard                 # RemoveENKeyboard               # 添加英语键盘
+# EnableNumlock                 # DisableNumlock                 # 启用Numlock
+# DisableEnhPointerPrecision    # EnableEnhPointerPrecision      # 增强鼠标指针精度
+# SetSoundSchemeNone            # SetSoundSchemeDefault          # 声音方案无声或默认
+# DisableStartupSound           # EnableStartupSound             # 系统启动声音
+# DisableChangingSoundScheme    # EnableChangingSoundScheme      # 禁止更换声音方案
+# EnableVerboseStatus           # DisableVerboseStatus           # 启动/关机时的状态文字
+DisableF1HelpKey                # EnableF1HelpKey                # F1帮助热键
+
+### Explorer UI Tweaks ###
+# ShowExplorerTitleFullPath     # HideExplorerTitleFullPath      # 资源管理器标题显示完整路径
+ShowKnownExtensions             # HideKnownExtensions            # 显示或隐藏已知文件扩展名
+ShowHiddenFiles                 # HideHiddenFiles                # 显示被隐藏文件
+# ShowSuperHiddenFiles          # HideSuperHiddenFiles           # 显示被保护的系统文件
+# ShowEmptyDrives               # HideEmptyDrives                # 显示空驱动器
+# ShowFolderMergeConflicts      # HideFolderMergeConflicts       # 文件夹合并冲突
+EnableNavPaneExpand             # DisableNavPaneExpand           # 资源管理器导航窗格自动展开到当前文件夹
+# ShowNavPaneAllFolders         # HideNavPaneAllFolders          # 资源管理器导航窗格显示所有文件夹
+# ShowNavPaneLibraries          # HideNavPaneLibraries           # 资源管理器导航窗格显示库
+# EnableFldrSeparateProcess     # DisableFldrSeparateProcess     # 在独立进程打开文件夹窗口
+# EnableRestoreFldrWindows      # DisableRestoreFldrWindows      # 开机自动打开之前的文件夹窗口
+# ShowEncCompFilesColor         # HideEncCompFilesColor          # 用彩色显示加密压缩NTFS文件
+# DisableSharingWizard          # EnableSharingWizard            # 共享向导
+# HideSelectCheckboxes          # ShowSelectCheckboxes           # 资源管理器使用复选框以选择项
+HideSyncNotifications           # ShowSyncNotifications          # 资源管理器同步提供程序通知
+HideRecentShortcuts             # ShowRecentShortcuts            # 资源管理器最近和最频繁使用的快捷方式
+SetExplorerThisPC               # SetExplorerQuickAccess         # 资源管理器打开时显示此电脑
+HideQuickAccess                 # ShowQuickAccess                # 隐藏快速访问
+# HideRecycleBinFromDesktop     # ShowRecycleBinOnDesktop        # 桌面回收站图标
+ShowThisPCOnDesktop             # HideThisPCFromDesktop          # 桌面此电脑图标
+# ShowUserFolderOnDesktop       # HideUserFolderFromDesktop      # 桌面用户文件夹图标
+# ShowControlPanelOnDesktop     # HideControlPanelFromDesktop    # 桌面控制面板图标
+# ShowNetworkOnDesktop          # HideNetworkFromDesktop         # 桌面网络图标
+# HideDesktopIcons              # ShowDesktopIcons               # 隐藏显示桌面图标
+# ShowBuildNumberOnDesktop      # HideBuildNumberFromDesktop     # 桌面显示版本号
+HideDesktopFromThisPC           # ShowDesktopInThisPC            # 此电脑显示桌面文件夹
+# HideDesktopFromExplorer       # ShowDesktopInExplorer
+HideDocumentsFromThisPC         # ShowDocumentsInThisPC          # 此电脑显示文档文件夹
+# HideDocumentsFromExplorer     # ShowDocumentsInExplorer
+HideDownloadsFromThisPC         # ShowDownloadsInThisPC          # 此电脑显示下载文件夹
+# HideDownloadsFromExplorer     # ShowDownloadsInExplorer
+HideMusicFromThisPC             # ShowMusicInThisPC              # 此电脑显示音乐文件夹
+# HideMusicFromExplorer         # ShowMusicInExplorer
+HidePicturesFromThisPC          # ShowPicturesInThisPC           # 此电脑显示图片文件夹
+# HidePicturesFromExplorer      # ShowPicturesInExplorer
+HideVideosFromThisPC            # ShowVideosInThisPC             # 此电脑显示视频文件夹
+# HideVideosFromExplorer        # ShowVideosInExplorer
+Hide3DObjectsFromThisPC         # Show3DObjectsInThisPC          # 此电脑显示3D对象文件夹
+# Hide3DObjectsFromExplorer     # Show3DObjectsInExplorer
+# HideNetworkFromExplorer       # ShowNetworkInExplorer
+# HideIncludeInLibraryMenu      # ShowIncludeInLibraryMenu       # 右键“包含到库中”项
+# HideGiveAccessToMenu          # ShowGiveAccessToMenu           # 右键“授予访问权限”菜单项
+# HideShareMenu                 # ShowShareMenu                  # 右键“共享”菜单项
+# DisableThumbnails             # EnableThumbnails               # 显示缩略图功能
+DisableThumbnailCache           # EnableThumbnailCache           # 缓存缩略图
+DisableThumbsDBOnNetwork        # EnableThumbsDBOnNetwork        # 缓存网络文件夹的缩略图
+
+### Application Tweaks ###
+DisableOneDrive                 # EnableOneDrive                 # 禁用OneDrive
+UninstallOneDrive               # InstallOneDrive                # 卸载OneDrive，server不适用
+UninstallMsftBloat              # InstallMsftBloat               # 卸载微软自带APP
+UninstallThirdPartyBloat        # InstallThirdPartyBloat         # 卸载第三方预装APP
+# UninstallWindowsStore         # InstallWindowsStore            # 卸载Windows应用商店
+DisableXboxFeatures             # EnableXboxFeatures             # 禁用Xbox功能，server不适用
+# DisableFullscreenOptims       # EnableFullscreenOptims         # 全屏（游戏）优化
+DisableAdobeFlash               # EnableAdobeFlash               # 在IE和Edge中禁用Flash功能
+DisableEdgePreload              # EnableEdgePreload              # 开机后Edge在后台预启动
+DisableEdgeShortcutCreation     # EnableEdgeShortcutCreation     # Update更新后禁止创建Edge桌面快捷方式
+DisableIEFirstRun               # EnableIEFirstRun               # IE首次运行设置弹窗
+DisableFirstLogonAnimation      # EnableFirstLogonAnimation      # 新用户首次登录“Hi”动画
+DisableMediaSharing             # EnableMediaSharing             # Media Player媒体分享功能
+# DisableMediaOnlineAccess      # EnableMediaOnlineAccess        # Media Player在线获取授权
+# EnableDeveloperMode           # DisableDeveloperMode           # 开发人员模式
+# UninstallMediaPlayer          # InstallMediaPlayer             # 卸载MediaPlayer
+# UninstallInternetExplorer     # InstallInternetExplorer        # 卸载IE浏览器
+# UninstallWorkFolders          # InstallWorkFolders             # 卸载工作文件夹功能客户端，server不适用
+# UninstallHelloFace            # InstallHelloFace               # 卸载人脸解锁功能，server不适用
+# UninstallMathRecognizer       # InstallMathRecognizer          # 卸载MathRecognizer，server不适用
+# UninstallPowerShellV2         # InstallPowerShellV2            # 卸载PowerShell V2（可能影响诊断工具等）
+# UninstallPowerShellISE        # InstallPowerShellISE           # 卸载PowerShell ISE
+# InstallLinuxSubsystem         # UninstallLinuxSubsystem        # 安装Linux子系统
+# InstallHyperV                 # UninstallHyperV                # 安装HyperV虚拟机
+# UninstallSSHClient            # InstallSSHClient               # 卸载SSH客户端
+# InstallSSHServer              # UninstallSSHServer             # 安装SSH服务器
+# InstallTelnetClient           # UninstallTelnetClient          # 安装Telnet客户端
+# InstallNET23                  # UninstallNET23                 # 安装.Net2.0、3.0、3.5
+SetPhotoViewerAssociation       # UnsetPhotoViewerAssociation    # 设置Windows照片查看器文件关联
+AddPhotoViewerOpenWith          # RemovePhotoViewerOpenWith      # 添加Windows照片查看器到打开方式列表
+# UninstallPDFPrinter           # InstallPDFPrinter              # 卸载PDF虚拟打印
+UninstallXPSPrinter             # InstallXPSPrinter              # 卸载XPS文档虚拟打印
+RemoveFaxPrinter                # AddFaxPrinter                  # 移除传真打印机功能
+# UninstallFaxAndScan           # InstallFaxAndScan              # 卸载传真和扫描服务（server不适用）
+
+### Server Specific Tweaks ###
+# HideServerManagerOnLogin      # ShowServerManagerOnLogin       # 启动时显示服务器管理器
+# DisableShutdownTracker        # EnableShutdownTracker          # 关闭事件跟踪程序
+# DisablePasswordPolicy         # EnablePasswordPolicy           # 密码复杂度策略
+# DisableCtrlAltDelLogin        # EnableCtrlAltDelLogin          # 按Ctrl+Alt+Del登录
+# DisableIEEnhancedSecurity     # EnableIEEnhancedSecurity       # IE增强安全配置
+# EnableAudio                   # DisableAudio                   # 声音服务
+
+### Unpinning ###
+# UnpinStartMenuTiles                                            # 取消固定所有开始菜单图块
+# UnpinTaskbarIcons                                              # 取消固定所有任务栏图标
+
+### Auxiliary Functions ###
+WaitForKey
+Restart
